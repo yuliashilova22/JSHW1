@@ -4,7 +4,7 @@
  //Task 2
  {
  	var message, role;
- 	(role == 'Гость' ? message = 'Привет' : (role == 'Директор' ? message == 'Здравствуйте' : (role == '' ? message == 'Познакомимся?' : message == '')));
+ 	message = role == 'Гость' ? 'Привет' : role == 'Директор' ? 'Здравствуйте' : role == '' ? 'Познакомимся?' : '';
  }
 
  //Task 3
@@ -51,8 +51,8 @@ var min = 10,
 	max = 20;
 
 while (true) {
-	var first = Math.round(Math.random() * (max - min) + min);
-	var second = Math.round(Math.random() * (max - min) + min);
+	var first = Math.floor(Math.random() * (1 + max - min) + min);
+	var second = Math.floor(Math.random() * (1 + max - min) + min);
 	if (prompt(first + ' + ' + second + '?') == first + second) {
 		alert('Верно');
 		break;
